@@ -1,13 +1,92 @@
-{{ define "main" }}
+<html>
+<!--This example uses the default bootstrap stylesheet-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!--provides a full-width container that can expand or collapse based on the size of viewport-->
+<div class="container-fluid">
+   <div class="row">
+       <div class="col-md-2 col-sm-12 col-xs-12">
+           <nav id="navbar">
+               <h3>AWS Marketplace</h3>
+               <!--content stacking for smaller screens-->
+               <ul class="nav nav-pills nav-stacked">
+                <!--internal linking to the respective sections-->
+                   <a class="nav-link" href="#Introduction" rel="internal">
+                       <li>Introduction: What is AWS Marketplace?</li>
+                   </a>
+                   <a class="nav-link" href="#What_you_should_already_know" rel="internal">
+                       <li>Popular Categories?</li>
+                   </a>
+                   <a class="nav-link" href="#About_Topic" rel="internal">
+                       <li>Usage Information</li>
+                   </a>
+                   <a class="nav-link" href="#Topic_1" rel="internal">
+                       <li>Pricing Information</li>
+                   </a>
+                   <a class="nav-link" href="#Topic_2" rel="internal">
+                       <li>Highlights</li>
+                   </a>
+                </ul>
+           </nav>
+       </div>
+       <div class="col-md-10 col-sm-12 col-xs-12">
+           <main id="main-doc">
+               <section class="main-section" id="Introduction: What is AWS Marketplace?" >
+                <!--basic styling for the headings, better practice to do the same in a css file as the styling is same for all headers-->
+                   <h3 style = "background: black; color: white">Introduction: What is AWS Marketplace?</h3>
+                   <article>
+                   <p>AWS Marketplace is a buyer and seller online shop launched by Amazon in 2012. It enables a user to buy and sell software that runs on Amazon Web Services.<br>
 
-{{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle) }}
+A company uses the AWS Marketplace to market and sell its AWS-approved software products; Amazon oversees sellers and products in the AWS Marketplace to verify their reliability, ethics and security levels. Amazon also controls all billing and payment options through AWS user information. Software sold in the AWS Marketplace aims to add value to current AWS public cloud services; it is available in a variety of software categories.<br>
 
-{{ partial "short-text" .Params.blurb}}
+Once software has been purchased from the AWS Marketplace, the end user downloads and deploys it. AWS maintains all records of billing, payment collection and reporting through user accounts; buyers and sellers access the products through the AWS Management Console. Software purchased on the AWS Marketplace can be used across a variety of categories.
+                       </article>
+               </section>
+               <section class="main-section" id="What_you_should_already_know">
+                   <h3 style = "background: black; color: white">Popular Categories</h3>
+                   <article>
+                       <p>Software sold in the AWS Marketplace covers a range of categories, including operating systems, security, networking, storage, business intelligence, databases, DevOps and software-as-a-service subscriptions.</p>
+<!--creating list using html-->
+                       <li>Operating Systems</li>
+                       <li>storage</li>
+                       <li>Networking</li>
+                       <li>Security</li>
+                       <li>Dev ops</li>
+                       <p>And many more..</p>
+                       </artice>
+               </section>
+               <section class="main-section" id="About_Topic">
+                   <h3 style = "background: black; color: white">Usage Information</h3>
+                   <article>
+                   <code>Software as a Service (SaaS)</code>
+                       <p>Software as a service is a delivery model for software applications whereby the vendor hosts and operates the application over the Internet. Customers pay for using the software without owning the underlying infrastructure. With SaaS Contracts, customers will pay for usage through their AWS bill
+                       </p>
+                   </article>
+               </section>
+               <section class="main-section" id="Topic_1">
+                   <h3 style = "background: black; color: white">Pricing Information</h3>
+                   <article>
+                       Below are the total costs for these different subscription durations.
+Additional taxes or fees may apply.
+                       <code>Cloud CMS for Professionals
+Units	Description	1 MONTH	12 MONTHS
+FREELANCE	8 Cloud web apps	$79.99	$599.99
+AGENCY	25 Cloud web apps + Whitelabel portal	$199.99	$1,799.88
+CORPORATION	75 Cloud web apps + Whitelabel portal + VIP Support	$399.99	$3,599.88
 
-{{ partial "2-up" .Params }}
+                       </code>
+                   </article>
+               </section>
+               <section class="main-section" id="Topic_2">
+                   <h3 style = "background: black; color: white">Highlights</h3>
+                   <p>
+The benefits of AWS hosting with no complexity.<br>
+Create a database and manage it in few clicks. <br>Create an API in your language of choice and deploy it to AWS Lambda in few seconds with a direct endpoint and API documentation.<br>
 
-{{ partial "text-and-image" (dict "heading" .Params.values.heading "text" .Params.values.text "buttonText" "Read more" "buttonLink" "/values") }}
-
-{{ partial "blog" . }}
-
-{{ end }}
+                   </p>
+               </section>
+           </main>
+       </div>
+   </div>
+</div>
+</html>
