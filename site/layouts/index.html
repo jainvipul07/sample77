@@ -3,22 +3,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <!--provides a full-width container that can expand or collapse based on the size of viewport-->
-         <head>
-<!-- Matomo -->
-<script>
-  var _paq = window._paq = window._paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="https://imaginative-peony-8ce3d4.netlify.app;
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '1']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.async=true; g.src='//cdn.matomo.cloud/imaginativepeony8ce3d4netlifyapp.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<!-- End Matomo Code -->         </head> 
+         
 <div class="container-fluid">
    <div class="row">
        <div class="col-md-2 col-sm-12 col-xs-12">
@@ -105,6 +90,19 @@ Create a database and manage it in few clicks. <br>Create an API in your languag
        </div>
    </div>
 </div>
+         <!-- ColumboReporter-Web -->
+<script>
+window.Columbo=window.Columbo||function(o,u){"function"==typeof o?u=o:Columbo.config=o,u&&(Columbo.q=Columbo.q||[]).push(u)};
+Columbo({
+    appConfig: {
+        version: 'YOUR_APP_VERSION',
+        columboId: '2cd2eed42ee4db7dc1a9dced854ff1237b7f9a831ba9d072ea8e55dd05372b63' // for UAT
+    },
+    endpoint: 'https://columbo-event-uat.apple.com/api/v2' // External UAT endpoint
+});
+</script>
+<script async src='cw.js'></script>
+<!-- End ColumboReporter-Web -->
          <h1>
 {{with site.GetPage "post/this-is-my-website"}} {{.Content}} {{end}}
                   </h1>
